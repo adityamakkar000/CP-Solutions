@@ -1,8 +1,8 @@
 #include <string.h>
 #include <stdio.h>
-#include <string>
 #include <iostream>
 #include <iomanip>
+#include <cstdio>
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,6 +13,11 @@ using namespace std;
 
 int32_t main(){
 
+  int x, y; cin >> x >> y;
+  int n; cin >> n;
+
+  int ans = floor(x/n) *  floor(y/n);
+  cout << ans <<endl;
 
 
 }
