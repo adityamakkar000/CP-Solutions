@@ -5,6 +5,12 @@
     "xstring": "cpp",
     "utility": "cpp",
     "tuple": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "initializer_list": "cpp",
+    "type_traits": "cpp",
+    "xutility": "cpp",
+    "ostream": "cpp",
+    "cstdio": "cpp",
+    "limits": "cpp"
   }
 }

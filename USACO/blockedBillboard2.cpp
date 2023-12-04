@@ -23,6 +23,55 @@ bool intersect(vector<int> s1, vector<int> s2) {
 	}
 }
 
+int calculate_y(int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4){
+  if(x3 <= x1 && x4 >= x2){
+
+    if(y1 >= y3 && y2 <= y4){
+      return y2-y1;
+    }
+    else{
+      if(y3 <= y1 && y4 >= y2){
+        return 0;
+      }
+      else{
+        if(y2-y4 < 0){
+          return y3-y1;
+        }
+        else{
+          return y2-y4;
+        }
+      }
+    }
+  }
+  else{
+    return y2-y1;
+  }
+}
+int calculate_x(int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4){
+   if(y3 <= y1 && y4 >= y2){
+
+    if(x1 >= x3 && x2 <= x4){
+      return x2-x1;
+    }
+    else{
+      if(x3 <= x1 && x4 >= x2){
+        return 0;
+      }
+      else{
+        if(x2-x4 < 0){
+          return x3-x1;
+        }
+        else{
+          return x2-x4;
+        }
+      }
+    }
+  }
+  else{
+    return x2-x1;
+  }
+}
+
 int32_t main()
 {
 
@@ -40,41 +89,19 @@ int32_t main()
     s2.push_back(a);
   }
 
-
-  int height = s1[3] - s2[3];
-  int width = s2[0] - s1[0];
-
-  int area;
-
   if(intersect(s1,s2)){
 
-    bool  h, w;
+    int x,y;
 
-    if(height > 0) h = true;
-    else h = false;
+    y = calculate_y(s1[0],s1[2],s2[0],s2[2], s1[1],s1[3],s2[1],s2[3]);
+    x = calculate_x(s1[0],s1[2],s2[0],s2[2], s1[1],s1[3],s2[1],s2[3]);
 
-    if(width > 0) w = true;
-    else w = false;
-
-    if(h && w){
-      area = (s1[3]-s1[1])*(s1[2] - s1[0]);
-    }
-    if(h && !w){
-      area = height*(s1[2] - s1[0]);
-    }
-    if(!h && w){
-      area = width * (s1[3]-s1[1]);
-    }
-    if(!h && !w){
-      area = 0;
-    }
-
-  } else{
-    area =  (s1[3]-s1[1])*(s1[2] - s1[0]);
+    cout << x * y << endl;
   }
-
-
-  cout << area << endl;
+  else{
+    int ans = (s1[2]-s1[0])*(s1[3]-s1[1]);
+    cout << ans << endl;
+  }
 
 
 }
