@@ -15,8 +15,8 @@ using namespace std;
 int32_t main()
 {
 
-  freopen("cowqueue.in", "r", stdin);
-  freopen("cowqueue.out", "w", stdout);
+  // freopen("cowqueue.in", "r", stdin);
+  // freopen("cowqueue.out", "w", stdout);
 
   int n; cin >> n;
   vector<int> cow;

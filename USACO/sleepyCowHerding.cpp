@@ -15,19 +15,28 @@ int32_t main(){
   freopen("herding.in","r",stdin);
   freopen("herding.out", "w", stdout);
 
-  vector<int> v(3,0);
-  for(int i = 0; i < 3; i++) cin >> v[i];
+  int a,b,c;
+  cin >> a >> b >> c;
+  vector<int> v = {a,b,c};
   sort(v.begin(), v.end());
 
-  int d1 = v[1]-v[0]-1;
-  int d2 = v[2]-v[1]-1;
 
-  if(min(d2,d1) == 0){
-    cout << max(d2,d1) << endl;
-    cout << max(d2,d1) << endl;
+  int ans1 = 0;
+  int ans2 = 0;
+
+
+  if(v[2] -1 == v[1] && v[1] == v[0]+1){
+    ans1 = 0;
+  }else if(v[2]-v[1] == 2 || v[1]-v[0] == 2){
+    ans1 = 1;
+  }else{
+    ans1 = 2;
   }
-  else{
-    cout << min(d2,d1) << endl;
-    cout << max(d2,d1) << endl;
-  }
+
+  ans2 = max(v[2]-v[1]-1, v[1]-v[0]-1);
+
+  cout << ans1 << endl;
+  cout << ans2 << endl;
+
+
 }

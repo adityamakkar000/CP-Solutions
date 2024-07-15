@@ -1,38 +1,31 @@
-#include <string.h>
-#include <stdio.h>
-#include <string>
-#include <iostream>
-#include <iomanip>
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
-#define MAXN 202020
-#define MOD 1000000007
-#define int long long
+#define int 
 
-int32_t main()
-{
-  int n = 3;
-  vector<vector<int>> final;
+void swap1(int *x, int *y){
+  int temp = *x;
+   *x = *y;
+   *y = temp;
+}
 
-  for (int b = 0; b < (1 << n); b++)
-  {
+void test2(int &x){
+  x = 6;
+}
 
-    vector<int> subset;
-    for (int i = 0; i < n; i++)
-    {
-      if (b & (1 << i))
-        subset.push_back(i);
-    }
-    final.push_back(subset);
-  }
+int main(){
 
-  // for(auto k: final){
-  //   for(int i: k){
-  //     cout << i << " ";
-  //   }
-  //   cout << endl;
-  // }
+  int x = 5;
+  int y = 6;
+  cout << x << " " << y << endl;
+  ptr i = &x;
+  swap(i*&y);
+  cout << x << " " << y << endl;
+
+
+
+
 
 }
