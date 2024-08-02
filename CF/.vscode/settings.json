@@ -3,9 +3,6 @@
     ".env.*": "dotenv",
     ".prettierrc": "json",
     "*.css": "css",
-    "xstring": "cpp",
-    "initializer_list": "cpp",
-    "xutility": "cpp",
-    "iostream": "cpp"
+    "ostream": "cpp"
   }
 }

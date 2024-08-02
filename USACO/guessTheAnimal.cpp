@@ -11,19 +11,20 @@ using namespace std;
 #define MOD 1000000007
 #define int long long
 
-vector<int> v[100001];
-bool visited[100001];
-
-
 
 int32_t main(){
+
+  // freopen("sleepy.in", "r", stdin);
+  // freopen("sleepy.out", "w", stdout);
+
   int n; cin >> n;
-  for(int i = 0; i < n-1; i++){
-    int a,b; cin >> a >> b;
-    a--; b--;
-    v[a].push_back(b);
-    v[b].push_back(a);
-  }
+  vector<int> v(n);
+  set<int> a;
+  for(int &i: v){ cin >> i; a.insert(i);}
 
   
+
+
+
+
 }
