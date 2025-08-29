@@ -6,6 +6,14 @@
     "xstring": "cpp",
     "initializer_list": "cpp",
     "xutility": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "vector": "cpp",
+    "array": "cpp",
+    "future": "cpp",
+    "istream": "cpp",
+    "locale": "cpp",
+    "tuple": "cpp",
+    "variant": "cpp"
   }
 }

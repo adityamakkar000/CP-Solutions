@@ -1,2 +1,2 @@
 # CP-Solutions
-Competitive programming soultions
+Competitive programming solutions 

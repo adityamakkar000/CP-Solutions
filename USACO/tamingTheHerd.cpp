@@ -15,6 +15,8 @@ int32_t main(){
   freopen("taming.in","r",stdin);
   freopen("taming.out", "w", stdout);
 
+
+
   int n; cin >> n;
   vector<int> v;
   for(int i = 0; i < n; i++){
